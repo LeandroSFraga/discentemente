@@ -2,6 +2,7 @@ import 'package:discentemente/app_controller.dart';
 import 'package:discentemente/config_page.dart';
 import 'package:discentemente/callendar_page.dart';
 import 'package:discentemente/archives_page.dart';
+import 'package:discentemente/login_page.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -23,11 +24,13 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
+          initialRoute: '/',
           routes: {
-            '/': (context) => ConfigPage(),
-            '/': (context) => HomePage(),
-            '/': (context) => ArchivesPage(),
-            '/': (context) => CallendarPage(),
+            '/': (context) => loginPage(),
+            '/config': (context) => ConfigPage(),
+            '/home': (context) => HomePage(),
+            '/archives': (context) => ArchivesPage(),
+            '/callendar': (context) => CallendarPage(),
           },
         );
       },
